@@ -1,6 +1,4 @@
-# OpenSearch
-
-## Permission for `_cat/indices`
+# Opern Search Permission for `_cat/indices`
 
 ```json
 {
