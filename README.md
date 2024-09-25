@@ -12,3 +12,6 @@
     - [Monitor ecs containers with ecs exec](./devops/aws/monitor-ecs-containers-with-ecs-exec.md)
   - 🗄️ Database
     - [OpenSearch Permission for `_cat/indices`](./devops/database/opensearch-cat-indices-permission.md)
+
+## New topics
+- [Accelerating development with AWS CDK plugin – CfnGuardValidator](https://aws.amazon.com/blogs/mt/accelerating-development-with-aws-cdk-plugin-cfnguardvalidator/)
