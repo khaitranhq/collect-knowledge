@@ -13,6 +13,8 @@ You can select one of the following Secure Hash Algorithms (SHA) or Cyclic Redun
 
 You can use Console, SDKs, Rest API or CLI to put objects with checksum or retrieve checksum for verification.
 
+<img src="./devops/aws/storage/s3/select-additional-checksums.png />
+
 ## Using Content-MD5 when uploading objects
 
 See `content-md5` option in `aws s3api put-object`
