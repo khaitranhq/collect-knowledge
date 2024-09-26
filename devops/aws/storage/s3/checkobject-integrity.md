@@ -6,20 +6,20 @@ Amazon S3 uses checksum values to verify the integrity of data that you upload t
 
 You can select one of the following Secure Hash Algorithms (SHA) or Cyclic Redundancy Check (CRC) data-integrity check algorithms:
 
-- CRC-32
-- CRC-32C
-- SHA-1
-- SHA-256
+- 🌀 CRC-32
+- 🌀 CRC-32C
+- 🔒 SHA-1
+- 🔒 SHA-256
 
 You can use Console, SDKs, Rest API or CLI to put objects with checksum or retrieve checksum for verification.
 
 <img src="./devops/aws/storage/s3/select-additional-checksums.png />
 
-## Using Content-MD5 when uploading objects
+## Using Content-MD5 when uploading objects 📦
 
 See `content-md5` option in `aws s3api put-object`
 
-## Using Content-MD5 and the ETag to verify uploaded objects
+## Using Content-MD5 and the ETag to verify uploaded objects 🔍
 
 The ETag (Entity Tag) for an object in Amazon S3 represents a unique identifier for a specific version of that object, reflecting changes in the object's content but not its metadata. Here's how the ETag is generated based on different scenarios:
 
@@ -31,11 +31,9 @@ The ETag (Entity Tag) for an object in Amazon S3 represents a unique identifier 
 
 If the ETag is an MD5 digest, you can compare it with a calculated or stored Content-MD5 value to verify data integrity.
 
-## Using trailing checksums
+## Using trailing checksums 🧩
 
 When uploading objects to S3, you can provide a precalculated checksum or let the AWS SDK automatically generate a trailing checksum using a specified algorithm. By setting the ChecksumAlgorithm parameter, the SDK calculates and appends the checksum during upload, allowing S3 to handle verification and upload in a single step.
 
-## Using part-level checksums for multipart uploads
+## Using part-level checksums for multipart uploads 🗂️
 When objects are uploaded to Amazon S3, they can be uploaded as a single object or through multipart uploads, with objects larger than 16 MB automatically using multipart upload via the console. In a multipart upload, the ETag is not an MD5 digest of the entire object but is derived from the MD5 digests of each part. Amazon S3 concatenates these MD5 digests, calculates a final digest, and appends the number of parts to the ETag.
-
-If additional checksums are enabled, S3 calculates a checksum for each part using the specified algorithm, and you can retrieve part-specific checksum details using the `GetObjectAttributes` or ListParts operations. For completed uploads, the `GetObject` and `HeadObject` operations can be used to get the checksum for individual parts. However, if the object is copied via the `CopyObject` command, the checksum changes, even if the data remains unchanged, as the entire object is treated as a single entity during the copy.
