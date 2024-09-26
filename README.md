@@ -7,9 +7,9 @@
     - [Error handling best practices](./code/golang/error-handling-best-practices.md)
 - 🛠️ DevOps
   - ☁️ AWS
-    - [Enable RDS audit log](./devops/aws/enable-rds-audit-log.md)
-    - [Intrinsic functions in step functions](./devops/aws/intrinsic-functions-in-step-functions.md)
-    - [Monitor ecs containers with ecs exec](./devops/aws/monitor-ecs-containers-with-ecs-exec.md)
+    - [Enable RDS audit log](./devops/aws/database/rds/enable-rds-audit-log.md)
+    - [Intrinsic functions in step functions](./devops/aws/compute/step-function/intrinsic-functions-in-step-functions.md
+    - [Monitor ecs containers with ecs exec](./devops/aws/compute/ecs/monitor-ecs-containers-with-ecs-exec.md
   - 🗄️ Database
     - [OpenSearch Permission for `_cat/indices`](./devops/database/opensearch-cat-indices-permission.md)
 
