@@ -12,7 +12,7 @@
 - Integrate EventBridge rules to be notified
 - Can protect against **CryptoCurrency** attacks (has a dedicated "finding" for it)
 
-## Advanced
+## Multi-account management
 
 <img src="./guardduty_advanced.png" />
 
@@ -25,3 +25,8 @@
   - Manage GuardDuty within the Associated member accounts
   - Manage findings, suppression rules, trusted IP lists, thread lists
 - Ability of specifying a member account as the Organization's delegated administrator of GuardDuty
+
+## Some architectures
+
+<img src="./guardduty-example-1.png" />
+<img src="./guardduty-example-2.png" />
