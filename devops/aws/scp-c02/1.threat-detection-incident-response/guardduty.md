@@ -30,3 +30,16 @@
 
 <img src="./guardduty-example-1.png" />
 <img src="./guardduty-example-2.png" />
+
+## Suppression Rules
+
+- Set of criteria that automatically filter and archive new findings
+- Example: low-value findings
+- **Suppressed findings are NOT sent to Security Hub, S3, Detective, or EventBridge**
+- Suppressed findings can be still viewed in the Archive
+
+## Troubleshooting
+
+### GuardDuty is activated but it didn’t generate any DNS based findings?
+
+- **Reason**: GuardDuty only processes DNS logs if you use the default VPC DNS resolver. All other types of DNS resolvers won't generated DNS based findings
