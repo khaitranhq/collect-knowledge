@@ -1,6 +1,6 @@
 # Persistence in Redis and ElastiCache
 
-## Persistence in Redis
+## Persistence in Redis 💾
 
 There are two ways to ensure data persistence in Redis across restarts: through regular database snapshots (**RDB**) or by enabling the append-only file (**AOF**), a log capturing all the performed operations. Both methods, if enabled, will be replayed automatically when your Redis server starts. We can combine both methods.
 
@@ -65,7 +65,7 @@ aof_pending_bio_fsync:0
 aof_delayed_fsync:0
 ```
 
-## What happens when Redis runs out of memory?
+## What happens when Redis runs out of memory? 🧠
 
 - When pushing new values to Redis with limited memory, data handling depends on the `maxmemory-policy` setting.
 - `maxmemory-policy` Setting: Determines the behavior when Redis runs out of memory:
@@ -79,7 +79,7 @@ aof_delayed_fsync:0
   - `volatile-random`: Randomly removes keys with expire field set to true.
   - `volatile-ttl`: Removes keys with expire field set to true and the shortest remaining time-to-live (TTL) value.
 
-## Persistence in ElastiCache
+## Persistence in ElastiCache ☁️
 
 Persistence in AWS ElastiCache Redis clusters is a more complicated story. Let's check some solutions
 
