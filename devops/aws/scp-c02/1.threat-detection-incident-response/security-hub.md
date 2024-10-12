@@ -1,6 +1,6 @@
 # Security Hub
 
-<img src="./security_hub.png" />
+<img src="./assets/security_hub.png" />
 
 ## Prerequisites
 
@@ -20,5 +20,5 @@
 
 ## Custom actions
 
-<img src="./security-hub-architecture-1.png" />
-<img src="./security-hub-architecture-2.png" />
+<img src="./assets/security-hub-architecture-1.png" />
+<img src="./assets/security-hub-architecture-2.png" />

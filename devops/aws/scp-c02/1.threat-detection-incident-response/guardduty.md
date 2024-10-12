@@ -2,7 +2,7 @@
 
 ## Overview
 
-<img src="./guardduty.png" />
+<img src="./assets/guardduty.png" />
 
 - Input data includes
   - CloudTrail events logs: management events and S3 data events
@@ -14,7 +14,7 @@
 
 ## Multi-account management
 
-<img src="./guardduty_advanced.png" />
+<img src="./assets/guardduty_advanced.png" />
 
 - Ability to manage multiple accounts in GuardDuty
 - Associate the Member accounts with the Accounts Administrator by 2 ways
@@ -28,8 +28,8 @@
 
 ## Some architectures
 
-<img src="./guardduty-example-1.png" />
-<img src="./guardduty-example-2.png" />
+<img src="./assets/guardduty-example-1.png" />
+<img src="./assets/guardduty-example-2.png" />
 
 ## Suppression Rules
 
