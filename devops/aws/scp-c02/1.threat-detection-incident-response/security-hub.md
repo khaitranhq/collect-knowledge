@@ -1,6 +1,6 @@
 # Security Hub
 
-<img src="./assets/security_hub.png" />
+<img src="./assets/security-hub.png" />
 
 ## Prerequisites
 

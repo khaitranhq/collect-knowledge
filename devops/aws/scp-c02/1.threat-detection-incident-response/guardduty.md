@@ -14,7 +14,7 @@
 
 ## Multi-account management
 
-<img src="./assets/guardduty_advanced.png" />
+<img src="./assets/guardduty-advanced.png" />
 
 - Ability to manage multiple accounts in GuardDuty
 - Associate the Member accounts with the Accounts Administrator by 2 ways
