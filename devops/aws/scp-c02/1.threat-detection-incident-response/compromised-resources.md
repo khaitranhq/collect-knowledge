@@ -18,3 +18,8 @@
 
 - **Offline investigation**: shutdown instance and investigate with the EBS snapshot (by creating a new one from this EBS snapshot)
 - **Online investigation**: investigate the compromised instance
+
+## S3 buckets
+
+<img src="./assets/compromised-s3.png" />
+

@@ -19,3 +19,4 @@
 - [DevSecOps roadmap](https://github.com/hahwul/DevSecOps/tree/main)
 - Docker bridge network
 - [Persistence in Redis and Amazon ElastiCache](https://lipanski.com/posts/persistence-in-elasticache-redis)
+- Zero Trust Network Access
