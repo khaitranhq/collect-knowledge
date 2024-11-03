@@ -46,3 +46,5 @@ When to use Transfer Acceleration?
 **Noted**: If objects < 1GB, consider using CloudFront instead.
 
 ## Amazon CloudWatch
+
+Monitor metrics to optimize
