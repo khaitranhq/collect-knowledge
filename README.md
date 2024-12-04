@@ -15,8 +15,8 @@
 
 ## New topics
 
+- CDK best practices
 - [Accelerating development with AWS CDK plugin – CfnGuardValidator](https://aws.amazon.com/blogs/mt/accelerating-development-with-aws-cdk-plugin-cfnguardvalidator/)
-- [DevSecOps roadmap](https://github.com/hahwul/DevSecOps/tree/main)
 - Docker bridge network
 - [Persistence in Redis and Amazon ElastiCache](https://lipanski.com/posts/persistence-in-elasticache-redis)
 - Zero Trust Network Access

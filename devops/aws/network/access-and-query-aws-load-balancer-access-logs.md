@@ -6,9 +6,11 @@ Application: AWS Management
 
 ## Enable access logs
 
-### Step 1: Create an S3 bucket
+### Application Load Balancer
 
-### Step 2: Attach a policy to the S3 bucket
+#### Step 1: Create an S3 bucket
+
+#### Step 2: Attach a policy to the S3 bucket
 
 - Region available as of August 2022 and later
   List region:
@@ -76,7 +78,7 @@ Application: AWS Management
   }
   ```
 
-### Step 3: Configure access logs
+#### Step 3: Configure access logs
 
 - Open the load balancer
 - On the **Attributes** tab, choose **Edit**.
@@ -86,7 +88,67 @@ Application: AWS Management
   - URI without a prefix: `s3://*bucket-name*`
 - Choose **Save changes**.
 
-### Step 4: Verify logs
+#### Step 4: Verify logs
+
+### Network Load Balancer
+
+#### Step 1: Create an S3 bucket
+
+#### Step 2: Attach a policy to the S3 bucket
+
+```json
+{
+  "Version": "2012-10-17",
+  "Id": "AWSLogDeliveryWrite",
+  "Statement": [
+    {
+      "Sid": "AWSLogDeliveryAclCheck",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "delivery.logs.amazonaws.com"
+      },
+      "Action": "s3:GetBucketAcl",
+      "Resource": "arn:aws:s3:::amzn-s3-demo-destination-bucket",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceAccount": ["012345678912"]
+        },
+        "ArnLike": {
+          "aws:SourceArn": ["arn:aws:logs:region:012345678912:*"]
+        }
+      }
+    },
+    {
+      "Sid": "AWSLogDeliveryWrite",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "delivery.logs.amazonaws.com"
+      },
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::amzn-s3-demo-destination-bucket/Prefix/AWSLogs/account-ID/*",
+      "Condition": {
+        "StringEquals": {
+          "s3:x-amz-acl": "bucket-owner-full-control",
+          "aws:SourceAccount": ["012345678912"]
+        },
+        "ArnLike": {
+          "aws:SourceArn": ["arn:aws:logs:region:012345678912:*"]
+        }
+      }
+    }
+  ]
+}
+```
+
+#### Step 3: Configure access logs
+
+- Open the load balancer
+- On the **Attributes** tab, choose **Edit**.
+- For **Monitoring**, turn on **Access logs**.
+- For **S3 URI**, enter the S3 URI for your log files. The URI that you specify depends on whether you're using a prefix.
+  - URI with a prefix: `s3://*bucket-name*/*prefix*`
+  - URI without a prefix: `s3://*bucket-name*`
+- Choose **Save changes**.
 
 ## Query access logs using Athena
 
