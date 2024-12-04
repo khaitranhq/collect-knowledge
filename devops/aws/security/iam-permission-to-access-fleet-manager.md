@@ -36,7 +36,7 @@
       "Effect": "Allow",
       "Action": ["ssm:StartSession"],
       "Resource": [
-        "arn:aws:ec2:region:account-id:instance/instace-id",
+        "arn:aws:ec2:region:account-id:instance/instance-id",
         "arn:aws:ssm:region:account-id:managed-instance/instance-id",
         "arn:aws:ssm:region::document/AWS-StartPortForwardingSession"
       ],
