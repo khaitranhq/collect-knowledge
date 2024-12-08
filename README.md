@@ -25,8 +25,8 @@
       - [IAM Policy for AWS S3 Sync command](./devops/aws/security/iam-policy-for-aws-s3-sync.md)
       - [IAM Policy for Step Functions triggering other Step Functions](./devops/aws/security/iam-policy-for-step-functions-triggering-other-step-functions.md)
       - [IAM permission for the role to build and push Docker to ECR](./devops/aws/security/iam-policy-for-the-role-to-build-and-push-docker-to-ecr.md)
-      - [IAM Policy to access a specific EC2 instance with Fleet Manager](./devops/aws/security/iam-policy-to-access-fleet-manager.md
-      - [IAM Policy for managing own user](./devops/aws/security/iam-policy-to-manage-own-user.md
+      - [IAM Policy to access a specific EC2 instance with Fleet Manager](./devops/aws/security/iam-policy-to-access-fleet-manager.md)
+      - [IAM Policy for managing own user](./devops/aws/security/iam-policy-to-manage-own-user.md)
     - 💾 Storage
       - [Choose right storage solution](./devops/aws/storage/choose-right-storage-solution.md)
       - 📦 S3
