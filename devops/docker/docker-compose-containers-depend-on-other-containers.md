@@ -1,4 +1,4 @@
-# Docker Compose containers depend on other containers
+# Docker Compose containers depend on other containers healthcheck
 
 Tags: Docker
 Application: Docker management
