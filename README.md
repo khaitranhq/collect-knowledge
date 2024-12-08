@@ -1,123 +1,80 @@
-# 📚 My Knowledge Base
+# My knowledge base
 
-<details>
-<summary>🖥️ Coding</summary>
+## Table of Contents
 
-### 🐹 Golang
+### 🖥️ Coding
 
-- [Error handling best practices](./code/golang/error-handling-best-practices.md)
+#### 🐹 Golang
 
-  ### 📝 TypeScript
+    - [Error handling best practices](./code/golang/error-handling-best-practices.md)
 
-  - [Init a Typescript project with Prettier, Eslint](./code/typescript/init-project.md)
-    </details>
+#### 📝 TypeScript
 
-      <details>
-      <summary>🛠️ DevOps</summary>
+    - [Init a Typescript project with Prettier, Eslint](./code/typescript/init-project.md)
 
-  ### ☁️ AWS
+### 🛠️ DevOps
 
-<details>
-<summary>🖥️ Compute</summary>
+#### ☁️ AWS
 
-#### Step Functions
+##### 🖥️ Compute
 
-- [Intrinsic functions in step functions](./devops/aws/compute/step-function/intrinsic-functions-in-step-functions.md)
+      - [Intrinsic functions in step functions](./devops/aws/compute/step-function/intrinsic-functions-in-step-functions.md)
+      - [Monitor ecs containers with ecs exec](./devops/aws/compute/ecs/monitor-ecs-containers-with-ecs-exec.md)
 
-#### ECS
+##### 🗄️ Database
 
-- [Monitor ecs containers with ecs exec](./devops/aws/compute/ecs/monitor-ecs-containers-with-ecs-exec.md)
-</details>
+      - [Persistence in Redis and ElastiCache](./devops/aws/database/elasticache/persistence.md)
+      - [Enable RDS audit log](./devops/aws/database/rds/enable-rds-audit-log.md)
 
-<details>
-<summary>🗄️ Database</summary>
+##### 🌐 Network
 
-#### ElastiCache
+      - [Access and query AWS Load Balancer access logs](./devops/aws/network/access-and-query-aws-load-balancer-access-logs.md)
 
-- [Persistence in Redis and ElastiCache](./devops/aws/database/elasticache/persistence.md)
+##### 📌 Others
 
-#### RDS
+      - [Cost optimization for FinOps](./devops/aws/others/cost-optimization-for-finops.md)
 
-- [Enable RDS audit log](./devops/aws/database/rds/enable-rds-audit-log.md)
-</details>
+##### 🔒 Security
 
-<details>
-<summary>🌐 Network</summary>
+      - [IAM Policy for AWS S3 Sync command](./devops/aws/security/iam-policy-for-aws-s3-sync.md)
+      - [IAM Policy for Step Functions triggering other Step Functions](./devops/aws/security/iam-policy-for-step-functions-triggering-other-step-functions.md)
+      - [IAM permission for the role to build and push Docker to ECR](./devops/aws/security/iam-policy-for-the-role-to-build-and-push-docker-to-ecr.md)
+      - [IAM Policy to access a specific EC2 instance with Fleet Manager](./devops/aws/security/iam-policy-to-access-fleet-manager.md)
+      - [IAM Policy for managing own user](./devops/aws/security/iam-policy-to-manage-own-user.md)
 
-#### Load Balancer
+##### 💾 Storage
 
-- [Access and query AWS Load Balancer access logs](./devops/aws/network/access-and-query-aws-load-balancer-access-logs.md)
-</details>
+      - [Choose right storage solution](./devops/aws/storage/choose-right-storage-solution.md)
 
-<details>
-<summary>📌 Others</summary>
+###### 📦 S3
 
-#### FinOps
+        - [Checking object integrity with additional checkums](./devops/aws/storage/s3/checkobject-integrity.md)
+        - [Enhance Performance](./devops/aws/storage/s3/enhance-performance.md)
+        - [S3 management](./devops/aws/storage/s3/management.md)
+        - [S3 Object Lock](./devops/aws/storage/s3/object-lock.md)
+        - [S3 Security](./devops/aws/storage/s3/security.md)
+        - [S3 Storage Classes](./devops/aws/storage/s3/storage-classes.md)
+        - [S3 Troubleshooting](./devops/aws/storage/s3/troubleshooting.md)
 
-- [Cost optimization for FinOps](./devops/aws/others/cost-optimization-for-finops.md)
-</details>
-
-<details>
-<summary>🔒 Security</summary>
-
-#### IAM Policies
-
-- [IAM Policy for AWS S3 Sync command](./devops/aws/security/iam-policy-for-aws-s3-sync.md)
-- [IAM Policy for Step Functions triggering other Step Functions](./devops/aws/security/iam-policy-for-step-functions-triggering-other-step-functions.md)
-- [IAM permission for the role to build and push Docker to ECR](./devops/aws/security/iam-policy-for-the-role-to-build-and-push-docker-to-ecr.md)
-- [IAM Policy to access a specific EC2 instance with Fleet Manager](./devops/aws/security/iam-policy-to-access-fleet-manager.md)
-- [IAM Policy for managing own user](./devops/aws/security/iam-policy-to-manage-own-user.md)
-</details>
-
-<details>
-<summary>💾 Storage</summary>
-
-- [Choose right storage solution](./devops/aws/storage/choose-right-storage-solution.md)
-
-#### 📦 S3
-
-- [Checking object integrity with additional checkums](./devops/aws/storage/s3/checkobject-integrity.md)
-- [Enhance Performance](./devops/aws/storage/s3/enhance-performance.md)
-- [S3 management](./devops/aws/storage/s3/management.md)
-- [S3 Object Lock](./devops/aws/storage/s3/object-lock.md)
-- [S3 Security](./devops/aws/storage/s3/security.md)
-- [S3 Storage Classes](./devops/aws/storage/s3/storage-classes.md)
-- [S3 Troubleshooting](./devops/aws/storage/s3/troubleshooting.md)
-</details>
-
-### 🔄 CICD
+#### 🔄 CICD
 
 - [Github Actions Tips](./devops/cicd/github-actions-tips.md)
 - [Harden security by authenticating AWS in GitHub Action](./devops/cicd/harden-security-aws-github-oidc.md)
 
-### 🗄️ Database
+#### 🗄️ Database
 
 - [Install Postgres 16 on Amazon Linux 2023](./devops/database/install-postgres-16-on-amazon-linux-2023.md)
 - [OpenSearch Permission for `_cat/indices`](./devops/database/opensearch-cat-indices-permission.md)
 
-### 🐳 Docker
+#### 🐳 Docker
 
 - [Docker Compose containers depend on other containers healthcheck](./devops/docker/docker-compose-containers-depend-on-other-containers.md)
-</details>
 
-<details>
-<summary>📋 Topics to Research</summary>
+## New topics to research
 
-### AWS
-
-- 🏗️ CDK best practices
+- CDK best practices
 - [Accelerating development with AWS CDK plugin – CfnGuardValidator](https://aws.amazon.com/blogs/mt/accelerating-development-with-aws-cdk-plugin-cfnguardvalidator/)
-- [S3 Tables](https://aws.amazon.com/s3/features/tables/)
-
-### Docker
-
-- 🌉 Docker bridge network
-
-### Database
-
+- Docker bridge network
 - [Persistence in Redis and Amazon ElastiCache](https://lipanski.com/posts/persistence-in-elasticache-redis)
-
-### Security
-
-- 🔐 Zero Trust Network Access
-</details>
+- Zero Trust Network Access
+- [S3 Tables](https://aws.amazon.com/s3/features/tables/)
