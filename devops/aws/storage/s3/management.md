@@ -5,4 +5,4 @@
 - S3 Inventory: report frequently to another S3 bucket
 - S3 Event notification
 - S3 Batch Operations
-  S3 metrics
+- S3 metrics

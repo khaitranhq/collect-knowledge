@@ -1,8 +1,6 @@
-# Storage
+# Choose right storage solution
 
 <img src="./storage-portfolio.png" />
-
-## Choose right storage solution
 
 - Type of access method (block, file, or object)
 - Patterns of access (random or sequential)

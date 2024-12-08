@@ -1,4 +1,4 @@
-# Minc - PROD - Enable audit log
+# Enable audit log
 
 ## References
 
