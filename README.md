@@ -33,6 +33,7 @@
 ##### 📌 Others
 
       - [Cost optimization for FinOps](./devops/aws/others/cost-optimization-for-finops.md)
+      - [AWS CDK Custom Resources](./devops/aws/others/cdk-custom-resources.md)
 
 ##### 🔒 Security
 
@@ -78,3 +79,4 @@
 - [Persistence in Redis and Amazon ElastiCache](https://lipanski.com/posts/persistence-in-elasticache-redis)
 - Zero Trust Network Access
 - [S3 Tables](https://aws.amazon.com/s3/features/tables/)
+- Amazon RDS Blue/Green Deployments
