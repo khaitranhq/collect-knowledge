@@ -20,6 +20,7 @@
 
       - [Intrinsic functions in step functions](./devops/aws/compute/step-function/intrinsic-functions-in-step-functions.md)
       - [Monitor ecs containers with ecs exec](./devops/aws/compute/ecs/monitor-ecs-containers-with-ecs-exec.md)
+      - [Access EC2 Methods](./devops/aws/compute/ec2/connect-ec2-methods.md)
 
 ##### 🗄️ Database
 
