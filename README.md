@@ -32,11 +32,6 @@
 
       - [Access and query AWS Load Balancer access logs](./devops/aws/network/access-and-query-aws-load-balancer-access-logs.md)
 
-##### 📌 Others
-
-      - [Cost optimization for FinOps](./devops/aws/others/cost-optimization-for-finops.md)
-      - [AWS CDK Custom Resources](./devops/aws/others/cdk-custom-resources.md)
-
 ##### 🔒 Security
 
       - [IAM Policy for AWS S3 Sync command](./devops/aws/security/iam-policy-for-aws-s3-sync.md)
@@ -58,6 +53,12 @@
         - [S3 Security](./devops/aws/storage/s3/security.md)
         - [S3 Storage Classes](./devops/aws/storage/s3/storage-classes.md)
         - [S3 Troubleshooting](./devops/aws/storage/s3/troubleshooting.md)
+
+##### 📌 Others
+
+      - [Cost optimization for FinOps](./devops/aws/others/cost-optimization-for-finops.md)
+      - [AWS CDK Custom Resources](./devops/aws/others/cdk-custom-resources.md)
+      - [Create a lambda function quickly with AWS CDK](./devops/aws/others/quickly-create-lambda-cdk.md)
 
 #### 🔄 CICD
 

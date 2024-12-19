@@ -2,7 +2,7 @@
 
 ## References
 
-- {https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/encrypt-log-data-kms.html#associate-cmk}[Encrypt log data in CloudWatch Logs using AWS Key Management Service]
+- [Encrypt log data in CloudWatch Logs using AWS Key Management Service]( https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/encrypt-log-data-kms.html#associate-cmk )
 - {https://aws.amazon.com/blogs/database/configuring-an-audit-log-to-capture-database-activities-for-amazon-rds-for-mysql-and-amazon-aurora-with-mysql-compatibility/}[Turning on the MariaDB audit plugin for Amazon RDS for MySQL]
 
 ## Steps
@@ -44,7 +44,7 @@
     "Resource": "*",
     "Condition": {
         "ArnLike": {
-          "kms:EncryptionContext:aws:logs:arn": "arn:aws:logs:<region>:<account-id>:#8
+          "kms:EncryptionContext:aws:logs:arn": "arn:aws:logs:<region>:<account-id>:log-group:<log-group-name>"
         }
     }
 }
