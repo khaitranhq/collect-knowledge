@@ -93,4 +93,16 @@ Install XFS tools package:
    ```bash
    sudo fdisk -l /dev/xvdf
    ```
-   </details>
+      </details>
+   <details>
+   <summary>UUID of volumes are identical</summary>
+
+- For XFS volumes, you can use the `xfs_admin` command to change the UUID of the volume.
+  ```bash
+  sudo xfs_admin -U generate /dev/xvdf
+  ```
+- For ext4 volumes, you can use the `tune2fs` command to change the UUID of the volume.
+  ```bash
+  sudo tune2fs /dev/xvdf -U random
+  ```
+  </details>
