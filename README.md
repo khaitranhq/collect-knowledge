@@ -21,7 +21,7 @@
 - [Intrinsic functions in step functions](./devops/aws/compute/step-function/intrinsic-functions-in-step-functions.md)
 - [Monitor ecs containers with ecs exec](./devops/aws/compute/ecs/monitor-ecs-containers-with-ecs-exec.md)
 - [Access EC2 Methods](./devops/aws/compute/ec2/connect-ec2-methods.md)
-- [Mount second volume](./devops/aws/compute/ec2/mount-second-volume.md)
+- [Mount second volume to EC2 instances](./devops/aws/compute/ec2/mount-second-volume.md)
 
 ##### 🗄️ Database
 
