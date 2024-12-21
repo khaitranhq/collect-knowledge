@@ -73,10 +73,25 @@ Install XFS tools package:
    ls -ld /data
    ```
 2. Ensure you're using sudo:
+
    ```bash
    sudo mount /dev/xvdf /data
    ```
+
    </details>
+
+   <details>
+   <summary>❌ <b>UUID of volumes are identical</b></summary>
+
+- For XFS volumes, you can use the `xfs_admin` command to change the UUID of the volume.
+  ```bash
+  sudo xfs_admin -U generate /dev/xvdf
+  ```
+- For ext4 volumes, you can use the `tune2fs` command to change the UUID of the volume.
+  ```bash
+  sudo tune2fs /dev/xvdf -U random
+  ```
+  </details>
 
 <details>
 <summary>❌ <b>Other errors</b></summary>
@@ -94,15 +109,3 @@ Install XFS tools package:
    sudo fdisk -l /dev/xvdf
    ```
       </details>
-   <details>
-   <summary>❌ <b>UUID of volumes are identical</b></summary>
-
-- For XFS volumes, you can use the `xfs_admin` command to change the UUID of the volume.
-  ```bash
-  sudo xfs_admin -U generate /dev/xvdf
-  ```
-- For ext4 volumes, you can use the `tune2fs` command to change the UUID of the volume.
-  ```bash
-  sudo tune2fs /dev/xvdf -U random
-  ```
-  </details>
