@@ -95,7 +95,7 @@ Install XFS tools package:
    ```
       </details>
    <details>
-   <summary>UUID of volumes are identical</summary>
+   <summary>❌ <b>UUID of volumes are identical</b></summary>
 
 - For XFS volumes, you can use the `xfs_admin` command to change the UUID of the volume.
   ```bash
