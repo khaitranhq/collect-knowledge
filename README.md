@@ -22,6 +22,7 @@
 - [Monitor ecs containers with ecs exec](./devops/aws/compute/ecs/monitor-ecs-containers-with-ecs-exec.md)
 - [Access EC2 Methods](./devops/aws/compute/ec2/connect-ec2-methods.md)
 - [Mount second volume to EC2 instances](./devops/aws/compute/ec2/mount-second-volume.md)
+- [Adding Users to EC2 Instances](./devops/aws/compute/ec2/add-user.md)
 
 ##### 🗄️ Database
 
