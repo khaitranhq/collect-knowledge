@@ -8,8 +8,10 @@
   - Not supported via AWS Management Console.
   - Supported for Linux containers on EC2, Fargate, and ECS Anywhere, and Windows containers on EC2 (specific ECS-optimized AMIs).
 - ECS Exec and Amazon VPC:
-  - Requires creating VPC endpoints for Systems Manager Session Manager (ssmmessages) and AWS KMS if encryption is used.
-  - For EC2 tasks using awsvpc networking mode without internet access, additional VPC endpoints are needed.
+  - If you are using interface VPC endpoint for ECS, it is required creating VPC endpoints for
+    - Systems Manager Session Manager (ssmmessages)
+    - AWS KMS if encryption is used.
+  - For EC2 tasks using awsvpc networking mode without internet access, additional VPC endpoints are needed for System Manager Session Manager (ssmmessages).
 - ECS Exec and SSM:
   - Commands run as root, and writable file systems are required.
   - Limiting ssm:start-session through IAM policies is recommended.
@@ -36,15 +38,10 @@
     "Statement": [
       {
         "Effect": "Allow",
-        "Action": [
-          "ssmmessages:CreateControlChannel",
-          "ssmmessages:CreateDataChannel",
-          "ssmmessages:OpenControlChannel",
-          "ssmmessages:OpenDataChannel"
-        ],
+        "Action": ["ssmmessages:CreateControlChannel", "ssmmessages:CreateDataChannel", "ssmmessages:OpenControlChannel", "ssmmessages:OpenDataChannel"],
         "Resource": "*"
       },
-      // For auditing with CloudWatch Logs
+      // (Optional) For auditing with CloudWatch Logs
       {
         "Effect": "Allow",
         "Action": ["logs:DescribeLogGroups"],
@@ -52,14 +49,10 @@
       },
       {
         "Effect": "Allow",
-        "Action": [
-          "logs:CreateLogStream",
-          "logs:DescribeLogStreams",
-          "logs:PutLogEvents"
-        ],
+        "Action": ["logs:CreateLogStream", "logs:DescribeLogStreams", "logs:PutLogEvents"],
         "Resource": "arn:aws:logs:region:account-id:log-group:/aws/ecs/cloudwatch-log-group-name:*"
       },
-      // For auditing with S3
+      // (Optional) For auditing with S3
       {
         "Effect": "Allow",
         "Action": ["s3:GetBucketLocation"],
@@ -75,7 +68,7 @@
         "Action": ["s3:PutObject"],
         "Resource": "arn:aws:s3:::s3-bucket-name/*"
       },
-      // KMS
+      // (Optional) KMS
       {
         "Effect": "Allow",
         "Action": ["kms:Decrypt"],
@@ -184,10 +177,7 @@ You limit user access to the execute-command API action by using one or more of 
     {
       "Effect": "Allow",
       "Action": ["ecs:ExecuteCommand", "ecs:DescribeTasks"],
-      "Resource": [
-        "arn:aws:ecs:region:aws-account-id:task/cluster-name/*",
-        "arn:aws:ecs:region:aws-account-id:cluster/*"
-      ],
+      "Resource": ["arn:aws:ecs:region:aws-account-id:task/cluster-name/*", "arn:aws:ecs:region:aws-account-id:cluster/*"],
       "Condition": {
         "StringEquals": {
           "ecs:ResourceTag/environment": "development"
@@ -206,12 +196,7 @@ With the following IAM policy, users can only launch tasks when ECS Exec is turn
   "Statement": [
     {
       "Effect": "Allow",
-      "Action": [
-        "ecs:RunTask",
-        "ecs:StartTask",
-        "ecs:CreateService",
-        "ecs:UpdateService"
-      ],
+      "Action": ["ecs:RunTask", "ecs:StartTask", "ecs:CreateService", "ecs:UpdateService"],
       "Resource": "*",
       "Condition": {
         "StringEquals": {
@@ -232,10 +217,7 @@ With the following IAM policy, users can only launch tasks when ECS Exec is turn
     {
       "Effect": "Deny",
       "Action": "ssm:StartSession",
-      "Resource": [
-        "arn:aws:ecs:region:aws-account-id:task/cluster-name/*",
-        "arn:aws:ecs:region:aws-account-id:cluster/*"
-      ]
+      "Resource": ["arn:aws:ecs:region:aws-account-id:task/cluster-name/*", "arn:aws:ecs:region:aws-account-id:cluster/*"]
     }
   ]
 }
