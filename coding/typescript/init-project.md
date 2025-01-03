@@ -13,7 +13,7 @@ pnpm install --save-dev \
   @trivago/prettier-plugin-sort-imports
 ```
 
-- `.prettierrc`
+- `.prettierrc.json`
 
 ```json
 {
