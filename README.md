@@ -56,6 +56,10 @@
 - [S3 Storage Classes](./devops/aws/storage/s3/storage-classes.md)
 - [S3 Troubleshooting](./devops/aws/storage/s3/troubleshooting.md)
 
+##### Development
+
+- [AWS CodeBuild Troubleshooting Guide](./devops/aws/development/codebuild-troubleshooting.md)
+
 ##### 📌 Others
 
 - [Cost optimization for FinOps](./devops/aws/others/cost-optimization-for-finops.md)
