@@ -70,6 +70,10 @@
 
 - [CloudWatch Contributor Insights](./devops/aws/monitoring/cloudwatch/contributor-insights.md)
 
+##### Management
+
+- [EventBridge](./devops/aws/management/eventbridge.md)
+
 #### 🔄 CICD
 
 - [Github Actions Tips](./devops/cicd/github-actions-tips.md)
