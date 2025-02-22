@@ -66,6 +66,10 @@
 - [AWS CDK Custom Resources](./devops/aws/others/cdk-custom-resources.md)
 - [Create a lambda function quickly with AWS CDK](./devops/aws/others/quickly-create-lambda-cdk.md)
 
+##### Monitoring
+
+- [CloudWatch Contributor Insights](./devops/aws/monitoring/cloudwatch/contributor-insights.md)
+
 #### 🔄 CICD
 
 - [Github Actions Tips](./devops/cicd/github-actions-tips.md)
