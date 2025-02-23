@@ -4,7 +4,6 @@
 pnpm install --save-dev \
   eslint \
   @eslint/js \
-  @types/eslint__js \
   typescript \
   typescript-eslint \
   eslint-plugin-prettier \
