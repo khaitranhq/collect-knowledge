@@ -1,25 +1,51 @@
-# CloudTrail
+# AWS CloudTrail
 
-## Notes
+CloudTrail is an AWS service that helps you enable governance, compliance, and operational and risk auditing of your AWS account. It records AWS API calls as events, providing a history of activity in your AWS account.
 
-- CloudTrail is not "real-time"
-- Delivers an envent within 15 minutes of an API call
-- Delivers log files to an S3 bucket every 5 minutes
+## Key Characteristics
+
+- **Delivery Timing**: CloudTrail is not real-time
+  - Events are delivered within 15 minutes of an API call
+  - Log files are delivered to your S3 bucket every 5 minutes
 
 ## Log File Integrity Validation
 
-### Digest files
+CloudTrail provides a way to determine whether a log file was modified, deleted, or unchanged after CloudTrail delivered it.
 
-![](/home/lewis/Workspaces/1.Personal/collect-knowledge/assets/2025-02-28-21-25-15.png)
+### Digest Files
 
-- References the log files for the last hour and contains a hash of each
-- Stored in the same S3 bucket as log files (different folder)
-- Enable:
-  - Console: To enable log file integrity validation with the CloudTrail console, choose Yes for the Enable log file validation option when you create or update a trail
-  - To enable log file integrity validation with the AWS CLI, use the --enable-log-file-validation option with the create-trail or update-trail commands. To disable log file integrity validation, use the --no-enable-log-file-validation option
-  - To enable log file integrity validation with the CloudTrail API, set the EnableLogFileValidation request parameter to true when calling CreateTrail or UpdateTrail.
+![CloudTrail Digest Files](../../../assets/2025-02-28-21-25-15.png)
 
-### Other methods
+Digest files:
+- Contain references to the log files for the last hour
+- Include a hash of each log file for validation
+- Are stored in the same S3 bucket as log files (but in a different folder)
 
-- Protect the S3 bucket using bucket policy, versioning,MFA Delete protection, encryption, object lock
-- Protect CloudTrail using IAM
+### Enabling Log File Integrity Validation
+
+You can enable validation through multiple methods:
+
+#### AWS Console
+- When creating or updating a trail, select **Yes** for the **Enable log file validation** option
+
+#### AWS CLI
+- To enable: Use the `--enable-log-file-validation` option with `create-trail` or `update-trail` commands
+- To disable: Use the `--no-enable-log-file-validation` option
+
+#### CloudTrail API
+- Set the `EnableLogFileValidation` request parameter to `true` when calling `CreateTrail` or `UpdateTrail`
+
+## Security Best Practices
+
+### Protecting CloudTrail Logs
+
+- **S3 Bucket Protection**:
+  - Implement restrictive bucket policies
+  - Enable versioning
+  - Configure MFA Delete protection
+  - Apply server-side encryption
+  - Use S3 Object Lock for immutability
+
+- **Access Control**:
+  - Use IAM policies to restrict CloudTrail management
+  - Implement least privilege access principles
