@@ -97,3 +97,8 @@
 - Zero Trust Network Access
 - [S3 Tables](https://aws.amazon.com/s3/features/tables/)
 - Amazon RDS Blue/Green Deployments
+- [AWS Cost Optimization Series](https://www.youtube.com/playlist?list=PLhr1KZpdzukcxUPo44KHv2lkRG4NToQXJ)
+- [Pillars of Performance Efficiency](https://wa.aws.amazon.com/wellarchitected/2020-07-02T19-33-23/wat.pillar.performance.en.html)
+- [Well Architect Labs](https://wellarchitectedlabs.com/)
+- [DevSecOps for infrastructure as code (IaC)](https://learn.microsoft.com/en-us/azure/architecture/solution-ideas/articles/devsecops-infrastructure-as-code)
+- [The Twelve-Factor App](https://12factor.net/)
