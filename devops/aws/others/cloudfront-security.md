@@ -15,7 +15,7 @@
 - OAC supports SSE-KMS natively (as requests are signed with Sigv4)
 - Add a statement to the KMS Key Policy to authorize the OAC
 
-## OAI
+### OAI
 
 - OAI doesn’t support SSE-KMS natively (only SSE-S3)
 - Use Lambda@Edge to sign requests from CloudFront to S3
@@ -28,6 +28,10 @@
 > **Note:** Not supported for S3 Origins
 
 ![](/home/lewis/LinuxWorkspaces/Personal/collect-knowledge/assets/2025-04-13-12-50-43.png)
+
+### Enhance CloudFront Origin Security with AWS WAF & AWS Secrets Manager
+
+![](/home/lewis/LinuxWorkspaces/Personal/collect-knowledge/assets/2025-04-13-13-05-30.png)
 
 ## With Cognito
 
