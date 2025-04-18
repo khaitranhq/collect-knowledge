@@ -104,3 +104,4 @@
 - [The Twelve-Factor App](https://12factor.net/)
 - [CloudFlare Zero Trust](https://developers.cloudflare.com/cloudflare-one/setup/)
 - Apache Hadoop, Storm, Hbase
+- DNS Spoofing, DNSSEC
