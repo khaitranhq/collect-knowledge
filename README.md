@@ -105,3 +105,4 @@
 - [CloudFlare Zero Trust](https://developers.cloudflare.com/cloudflare-one/setup/)
 - Apache Hadoop, Storm, Hbase
 - DNS Spoofing, DNSSEC
+- Add EKS cluster to existing ArgoCD
