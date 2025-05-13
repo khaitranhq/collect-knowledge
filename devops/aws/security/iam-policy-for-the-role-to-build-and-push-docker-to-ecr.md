@@ -19,7 +19,7 @@ Application: AWS Management
         "ecr:PutImage",
         "ecr:UploadLayerPart"
       ],
-      "Resource": "arn:aws:ecr:us-east-2:540204739101:repository/datastop-ai-predict-pathway-dev",
+      "Resource": "arn:aws:ecr:us-east-2:12345679:repository/abcdef",
       "Effect": "Allow"
     },
     {
