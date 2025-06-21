@@ -2,7 +2,7 @@
 
 AWS Client VPN supports multiple authentication methods to secure access to your VPN endpoints.
 
-![AWS Client VPN Authentication Types](../../assets/2025-03-08-21-33-46.png)
+![AWS Client VPN Authentication Types](/assets/2025-03-08-21-33-46.png)
 
 ## Active Directory Authentication
 

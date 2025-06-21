@@ -18,7 +18,7 @@
 
 ## Resource Policies
 
-![](/home/lewis/LinuxWorkspaces/Personal/collect-knowledge/assets/2025-04-15-22-23-47.png)
+![](/assets/2025-04-15-22-23-47.png)
 
 ## Throttling
 

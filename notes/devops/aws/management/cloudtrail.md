@@ -14,7 +14,7 @@ CloudTrail provides a way to determine whether a log file was modified, deleted,
 
 ### Digest Files
 
-![CloudTrail Digest Files](../../../assets/2025-02-28-21-25-15.png)
+![CloudTrail Digest Files](/assets/2025-02-28-21-25-15.png)
 
 Digest files:
 

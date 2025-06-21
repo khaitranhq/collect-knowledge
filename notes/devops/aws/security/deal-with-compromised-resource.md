@@ -11,7 +11,7 @@
 
 ### EC2 Instances
 
-![compromised-ec2](/home/lewis/Workspaces/Personal/collect-knowledge/assets/2025-01-16-21-50-26.png)
+![compromised-ec2](/assets/2025-01-16-21-50-26.png)
 
 #### Steps to Address
 
@@ -30,7 +30,7 @@
 
 ### S3 Buckets
 
-![compromised-s3](/home/lewis/Workspaces/Personal/collect-knowledge/assets/2025-01-16-21-53-35.png)
+![compromised-s3](/assets/2025-01-16-21-53-35.png)
 
 - Identify bucket by **GuardDuty**
 - Identify source by **CloudTrail** or **Detective**

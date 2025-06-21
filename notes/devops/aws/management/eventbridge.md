@@ -6,7 +6,7 @@ Amazon EventBridge is a serverless event bus service that makes it easier to bui
 
 ## Event Sources & Destinations
 
-![eventbridge-source-dest](/home/lewis/Workspaces/Personal/collect-knowledge/assets/2025-02-22-22-02-59.png)
+![eventbridge-source-dest](/assets/2025-02-22-22-02-59.png)
 
 ### Event Buses
 
@@ -17,7 +17,7 @@ Event buses receive events from various sources and match them to rules in your 
 - Custom applications and services
 - Partner applications and services
 
-  ![other-sources-event-buses](/home/lewis/Workspaces/Personal/collect-knowledge/assets/2025-02-22-22-03-15.png)
+  ![other-sources-event-buses](/assets/2025-02-22-22-03-15.png)
 
 ### Event Archiving
 

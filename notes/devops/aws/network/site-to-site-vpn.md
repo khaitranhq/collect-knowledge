@@ -6,7 +6,7 @@
 
 Border Gateway Protocol (BGP) refers to a gateway protocol that enables the internet to exchange routing information between autonomous systems (AS)
 
-![](../../../assets/2025-03-09-11-07-18.png)
+![](/assets/2025-03-09-11-07-18.png)
 
 ### Autonomous System and Autonomous System Number
 
@@ -15,7 +15,7 @@ An autonomous system (AS) is a large network or group of networks with a unified
 - The Internet is essentially a network of networks, with autonomous systems being the major networks that constitute it.
 - Every computer or device that connects to the Internet is linked to an AS.
 
-![Diagram of Autonomous System](../../../assets/2025-03-09-11-04-34.png)
+![Diagram of Autonomous System](/assets/2025-03-09-11-04-34.png)
 
 An Autonomous System Number (ASN) is a unique identifier assigned to each autonomous system (AS) for use in Border Gateway Protocol (BGP) routing. It enables the AS to exchange routing information with other autonomous systems on the Internet.
 

@@ -22,7 +22,7 @@ The Instance Metadata Service provides essential information and capabilities fo
 | **Networking Information** | Details about VPC, subnet, and network configurations                                     |
 | **Spot Instance Notices**  | Check if a spot instance is scheduled for termination                                     |
 
-![IMDS Role-based Access](../../../../assets/2025-06-20-23-22-41.png)
+![IMDS Role-based Access](/assets/2025-06-20-23-22-41.png)
 
 IMDS is extensively used by AWS services, SDKs, CLI, and customer applications to operate effectively within the AWS environment without requiring explicit credential management.
 
@@ -189,7 +189,7 @@ aws ec2 modify-instance-metadata-options \
   --http-endpoint disabled
 ```
 
-![IMDS Configuration Options](../../../../assets/2025-06-21-08-23-53.png)
+![IMDS Configuration Options](/assets/2025-06-21-08-23-53.png)
 
 ### SCPs or IAM Policies
 

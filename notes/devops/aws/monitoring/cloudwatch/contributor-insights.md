@@ -20,7 +20,7 @@ CloudWatch Contributor Insights helps you analyze log data and create time serie
 
 Below is an example of Contributor Insights analyzing VPC Flow Logs:
 
-![contributor-insight-flow-logs](/home/lewis/Workspaces/Personal/collect-knowledge/devops/aws/monitoring/cloudwatch/assets/2025-02-22-21-52-53.png)
+![contributor-insight-flow-logs](/assets/2025-02-22-21-52-53.png)
 
 ## References
 
