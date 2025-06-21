@@ -2,6 +2,9 @@
 # Script to generate Table of Contents in markdown format
 # from files in the notes folder recursively
 
+# Initialize counter for total number of notes
+total_notes=0
+
 # Function to convert kebab-case to Title Case
 convert_to_title_case() {
   local string=$1
@@ -48,6 +51,8 @@ generate_toc() {
         title=$(convert_to_title_case "$base_name")
         relative_path=${item#./}
         echo "$indent- [$title]($relative_path)"
+        # Increment the counter
+        ((total_notes++))
       fi
     fi
   done
@@ -60,6 +65,10 @@ echo ""
 # Start the TOC generation from the notes directory
 if [ -d "notes" ]; then
   generate_toc "notes" 0
+  
+  # Print the total number of notes
+  echo ""
+  echo "Total number of notes: $total_notes"
 else
   echo "Error: 'notes' directory not found!" >&2
   exit 1
