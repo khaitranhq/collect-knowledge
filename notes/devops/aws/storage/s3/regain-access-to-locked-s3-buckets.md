@@ -1,5 +1,7 @@
 # Regain Access to Locked S3 Buckets
 
+![](/home/lewis/Workspaces/Personal/collect-knowledge/assets/2025-06-21-18-36-08.png)
+
 ## Problem
 
 If you've accidentally configured your S3 bucket policy to deny access to everyone using a statement like:
