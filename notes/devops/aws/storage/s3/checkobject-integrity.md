@@ -13,7 +13,7 @@ You can select one of the following Secure Hash Algorithms (SHA) or Cyclic Redun
 
 You can use Console, SDKs, Rest API or CLI to put objects with checksum or retrieve checksum for verification.
 
-<img src="./select-additional-checksums.png" />
+![](/assets/select-additional-checksums.png)
 
 ## Using Content-MD5 when uploading objects 📦
 
@@ -36,4 +36,5 @@ If the ETag is an MD5 digest, you can compare it with a calculated or stored Con
 When uploading objects to S3, you can provide a precalculated checksum or let the AWS SDK automatically generate a trailing checksum using a specified algorithm. By setting the ChecksumAlgorithm parameter, the SDK calculates and appends the checksum during upload, allowing S3 to handle verification and upload in a single step.
 
 ## Using part-level checksums for multipart uploads 🗂️
+
 When objects are uploaded to Amazon S3, they can be uploaded as a single object or through multipart uploads, with objects larger than 16 MB automatically using multipart upload via the console. In a multipart upload, the ETag is not an MD5 digest of the entire object but is derived from the MD5 digests of each part. Amazon S3 concatenates these MD5 digests, calculates a final digest, and appends the number of parts to the ETag.

@@ -1,6 +1,6 @@
 # Storage Classes
 
-<img src="./s3-storage-classes-comparisoncomparison.jpg" />
+![](/assets/s3-storage-classes-comparisoncomparison.jpg)
 
 ## Choose the right storage class
 

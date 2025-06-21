@@ -2,11 +2,11 @@
 
 ## Using prefixes
 
-<img src="./s3_performance_prefix_initial.png" />
+![](/assets/s3_performance_prefix_initial.png)
 
 Initially, objects keys in a bucket reside on a single partition.
 
-<img src="./s3_performance_prefix_partitioned.png" />
+![](/assets/s3_performance_prefix_partitioned.png)
 
 Amazon S3 supports up to 3,500 PUT/POST/DELETE and 5,500 GET transactions per second (TPS) per partitioned prefix
 
