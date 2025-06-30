@@ -32,16 +32,17 @@ generate_toc() {
       continue
     fi
 
-    # Calculate indentation
-    indent=""
-    for ((i = 0; i < level; i++)); do
-      indent="  $indent"
-    done
-
     if [ -d "$item" ]; then
       # It's a directory
       title=$(convert_to_title_case "$base_name")
-      echo "$indent- **$title**"
+      heading_level=$((level + 2)) # Start from ## (level 0 -> ##, level 1 -> ###, etc.)
+      if [ $heading_level -gt 6 ]; then
+        heading_level=6
+      fi
+      heading_marks=$(printf '%*s' "$heading_level" | tr ' ' '#')
+      echo ""
+      echo "$heading_marks $title"
+      echo ""
 
       # Recursively process subdirectories
       generate_toc "$item" $((level + 1))
@@ -50,7 +51,7 @@ generate_toc() {
       if [[ $base_name == *.md ]]; then
         title=$(convert_to_title_case "$base_name")
         relative_path=${item#./}
-        echo "$indent- [$title]($relative_path)"
+        echo "- [$title]($relative_path)"
         # Increment the counter
         ((total_notes++))
       fi
