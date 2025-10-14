@@ -141,11 +141,7 @@ SECRET = 'YourStorageAccountKeyHere';
 -- Full backup with SAS authentication
 BACKUP DATABASE [AdventureWorks2022]
 TO URL = 'https://mystorageaccount.blob.core.windows.net/sqlbackups/AdventureWorks2022_Full.bak'
-WITH
-    COMPRESSION,
-    STATS = 5,
-    BLOCKSIZE = 65536,
-    MAXTRANSFERSIZE = 4194304;
+WITH COPY_ONLY, CHECKSUM
 GO
 ```
 
@@ -416,6 +412,21 @@ WITH
     MAXTRANSFERSIZE = 4194304, -- 4MB chunks
     BUFFERCOUNT = 50;         -- Increase buffer count
 ```
+
+#### 5. Transparent Data Encryption (TDE) Issues
+
+**Error**: `The backup operation for a database with service-managed transparent data encryption is not supported on SQL Database Managed Instance`
+
+**Solution**: Disable TDE encryption before performing backup operations
+
+```sql
+-- Disable database encryption and remove encryption key
+ALTER DATABASE [<db name>] SET ENCRYPTION OFF;
+USE [<db name>];
+DROP DATABASE ENCRYPTION KEY;
+```
+
+**Note**: This removes TDE encryption from the database. Ensure this aligns with your security requirements and compliance policies before proceeding. Re-enable TDE after restore if needed.
 
 ## Best Practices Summary
 
