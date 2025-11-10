@@ -99,6 +99,31 @@ println!("{}", c.get()); // 10
 
 ---
 
+## **Cow<T>** - Clone-on-Write
+**Usage:** Abstracts over borrowed and owned data. Clones only when mutation is needed.
+
+```rust
+use std::borrow::Cow;
+
+fn process(input: Cow<str>) -> Cow<str> {
+    if input.contains("hello") {
+        Cow::Owned(input.replace("hello", "hi")) // Clone only when modifying
+    } else {
+        input // No clone, just return borrowed
+    }
+}
+
+let s = "hello world";
+let result = process(Cow::Borrowed(s));
+```
+
+**Common Use Cases:**
+- Avoiding unnecessary allocations when data might not be modified
+- APIs that accept both `&str`/`&[T]` and `String`/`Vec<T>`
+- Optimization for read-heavy, occasionally-write scenarios
+
+---
+
 ## Common Combinations
 
 ```rust
