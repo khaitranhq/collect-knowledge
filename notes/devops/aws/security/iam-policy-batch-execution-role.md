@@ -7,7 +7,7 @@
                 "secretsmanager:DescribeSecret",
                 "secretsmanager:GetSecretValue"
             ],
-            "Resource": "arn:aws:secretsmanager:<region>:<account id>:secret:<secret id>",
+            "Resource": "arn:aws:secretsmanager:<region>:<account id>:secret:<secret name>",
             "Effect": "Allow"
         },
         {
@@ -15,7 +15,7 @@
                 "logs:CreateLogStream",
                 "logs:PutLogEvents"
             ],
-            "Resource": "arn:aws:logs:<region>:<account id>:log-group:<log group id>:*",
+            "Resource": "arn:aws:logs:<region>:<account id>:log-group:<log group name>:*",
             "Effect": "Allow"
         },
         {
